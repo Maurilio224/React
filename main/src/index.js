@@ -5,7 +5,7 @@ import Welcome from './Welcome';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <Welcome name = {"Gabriel"} age = {21} />
+    <Welcome name = {<strong>Gabriel</strong>} age = {21} />
  </div>
 );
 
