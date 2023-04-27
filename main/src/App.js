@@ -2,7 +2,7 @@
 
 function App(props) {
   return (
-    <>Hello{props.name}</>
+    <>Hello {props.name}</>
   );
 }
 
