@@ -6,7 +6,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
     <p>
-    <Welcome name ={"Andrea"}/>
+    <Welcome name = {"Gabriel"} />
     </p>
  </div>
 );
