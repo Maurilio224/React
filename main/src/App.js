@@ -2,7 +2,7 @@ import Counter from "./Counter";
 
 function App(props) {
   return (
-    <Counter/>
+    <Counter default = {0} increment = {1} interval = {1000}/>
   );
 }
 

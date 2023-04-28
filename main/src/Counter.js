@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function Counter() {
-    const [counter, setCounter] = useState(0)
+export default function Counter(props) {
+    const [counter, setCounter] = useState(props.default)
 
     useEffect(() => {
         const counterInterval = setInterval(() => {
-            setCounter(counter => counter + 1)
-        },1000)
+            setCounter(counter => counter + props.increment)
+        },props.interval)
     },[])
 
     return (
