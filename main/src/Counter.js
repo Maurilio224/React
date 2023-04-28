@@ -1,3 +1,4 @@
+import CounterDisplay from './CounterDisplay';
 import { useState, useEffect } from "react";
 
 export default function Counter(props) {
@@ -10,8 +11,6 @@ export default function Counter(props) {
     },[])
 
     return (
-        <>
-            <h1>Counter:{counter}</h1>
-        </>
+        <CounterDisplay counter = {counter}/>
     )
 }
