@@ -1,8 +1,8 @@
-
+import Counter from "./Counter";
 
 function App(props) {
   return (
-    <>Hello{props.name}</>
+    <Counter/>
   );
 }
 
