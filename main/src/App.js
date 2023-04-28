@@ -4,7 +4,7 @@ import Welcome from "./Welcome";
 function App(props) {
   return (
     <>
-      <Welcome name={"Maurilio"} />
+      <Welcome name={"John"} />
       <Age age={64} />
     </>
   );
