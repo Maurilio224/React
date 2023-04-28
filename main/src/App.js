@@ -5,7 +5,7 @@ function App(props) {
   return (
     <>
       <Welcome name={"John"} />
-      <Age age={64} />
+      <Age age={14} />
     </>
   );
 
