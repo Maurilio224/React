@@ -1,9 +1,13 @@
 import React from "react";
 
-export default function CounterDisplay(props){
+export default class CounterDisplay extends React.Component{
+
+    render() {
         return (
             <>
-                <h1>Counter:{props.counter}</h1>
+                <h1>Counter:{this.props.counter}</h1>
             </>
         )
     }
+
+}
