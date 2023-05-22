@@ -1,6 +1,12 @@
 import React from "react";
-import { GithubUser } from "./GithubUser";
+import { CarDetails } from "./CarDetails";
+export function App() {
 
-export default function App() {
-    return <GithubUser username='yangus98'/>
+    const initialData = {
+        model : 'Alfa Romeo Giulia',
+        year : '2022',
+        color : 'Red'
+    }
+
+    return <CarDetails initialData={initialData} />
 }
