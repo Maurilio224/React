@@ -1,17 +1,6 @@
 import React from "react";
-import { useDataInputs } from "./useDataInputs";
+import { GithubUser } from "./GithubUser";
 
-export function App() {
-
-    const { onLogin , onUser , onPass } = useDataInputs()
-
-    return (
-        <>
-        <form>
-            <input onChange={onUser}></input>
-            <input type="password" onChange={onPass}></input>
-            <button onClick={onLogin} type="submit">Login</button>
-        </form>
-        </>
-    )
+export default function App() {
+    return <GithubUser username='Maurilio224/'/>
 }
