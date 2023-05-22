@@ -1,6 +1,8 @@
-import React from "react";
-import { GithubUserList } from "./GithubUserList";
+import React, { useState } from "react";
+import {Counter} from "./Counter";
 
-export default function App() {
-    return <GithubUserList/>
+export function App() {
+
+
+    return <Counter />
 }
