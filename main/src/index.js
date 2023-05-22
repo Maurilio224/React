@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM, { createRoot } from 'react-dom/client';
-import Input from './Input';
+import UncontrolledLogin from './UncontrolledLogin';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <Input/>
+ <UncontrolledLogin/>
 );
