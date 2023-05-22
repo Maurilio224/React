@@ -14,5 +14,5 @@ export function GithubUser(props) {
         } fetcher()
     },[]);
 
-    return <h2>{user ? user : 'loading'}</h2>
+    return <h2>{user ? user : 'Not a github user'}</h2>
 }
