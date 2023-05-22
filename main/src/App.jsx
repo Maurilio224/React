@@ -1,6 +1,13 @@
-import React from "react";
-import { FilteredList } from "./FilteredList";
+import Counter from './components/Counter';
+import { Route, Routes, Link } from 'react-router-dom';
 
-export function App() {
-    return <FilteredList/>
+function App() {
+  return <div>
+          <Link to="/counter">Counter</Link>
+        <Routes>
+          <Route path='/counter' element={<Counter/>} />   
+        </Routes>
+        </div>
 }
+
+export default App;
