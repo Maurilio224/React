@@ -14,9 +14,12 @@ function GithubUser(props) {
     }, [props.username])
 
     return <>
-            <div>
-                {data && <a href={data.html_url}><h1>{data.login}</h1></a>}
-            </div>
+            {data && (
+                <div>
+                <h4>{data.name}</h4>
+                <p>{data.login}</p>
+                </div>
+            )}
         </>
 }
 
