@@ -1,28 +1,33 @@
 import React from "react";
 
-export default class Login extends React.Component {
-    OnLogin = (event) => {
-        event.preventDefault();
-        let memoValue = {
-            name : this.props.text,
-            password : this.props.password
-        } 
-        console.log(memoValue)
-    }
+export default class UncontrolledLogin extends React.Component {
+    
+    handleUncontrolled = (event) => {
+        event.preventDefault()
 
-    OnReset = () => {
-        let deleteValue = {
-        name : '' ,
-        password : ''
-        }
-        console.log(deleteValue)
+        let username = event.target.username.value
+        let password = event.target.password.value
+        let remember = event.target.remember.checked
+
+        console.log({
+            username,
+            password,
+            remember
+        })
+   
     }
 
     render() {
         return (
         <>
-        <button disabled = {!this.props.text || !this.props.password} onClick={this.OnLogin}>Login</button>
-        <button disabled = {!this.props.text || !this.props.password} onClick={this.OnReset}>Reset</button>
+        <form onSubmit={this.handleUncontrolled}>
+            <input autoFocus name= 'username' defaultValue='Maurilio'></input>
+            <input name='password' type="password"></input>
+            <input name="remember" type="checkbox" ></input>
+
+            <button type="submit">Login</button>
+        </form>
+
         </>)
     }
 }
