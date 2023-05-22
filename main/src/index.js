@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import ClickTracker from './ClickTracker';
+import ReactDOM, { createRoot } from 'react-dom/client';
+import InteractiveWelcome from './InteractiveWelcome';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <ClickTracker/>
+ <InteractiveWelcome/>
 );
