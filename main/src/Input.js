@@ -22,8 +22,8 @@ export default class Input extends React.Component {
     render() {
         return (
             <>
-            <input name="username" value={this.state.username} onChange={this.handleInputChange}/>
-            <input name="password" type="password" value={this.state.password} onChange={this.handleInputChange}/>
+            <input name="username"  value={this.state.username} onChange={this.handleInputChange}/>
+            <input name="password"  type="password" value={this.state.password} onChange={this.handleInputChange}/>
             <Login text={this.state.username} password={this.state.password}/>
             </>
         )

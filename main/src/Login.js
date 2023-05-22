@@ -9,7 +9,20 @@ export default class Login extends React.Component {
         } 
         console.log(memoValue)
     }
+
+    OnReset = () => {
+        let deleteValue = {
+        name : '' ,
+        password : ''
+        }
+        console.log(deleteValue)
+    }
+
     render() {
-        return <button disabled = {!this.props.text || !this.props.password} onClick={this.OnLogin}>Login</button>
+        return (
+        <>
+        <button disabled = {!this.props.text || !this.props.password} onClick={this.OnLogin}>Login</button>
+        <button disabled = {!this.props.text || !this.props.password} onClick={this.OnReset}>Reset</button>
+        </>)
     }
 }
