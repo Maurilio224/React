@@ -1,19 +1,6 @@
-import React, { useState } from "react";
-import {Counter} from "./Counter";
+import React from "react";
+import { GithubUser } from "./GithubUser";
 
-export function App() {
-
-    const [showCounter, setShowCounter] = useState(true)
-
-    function handleRemoveCounter() {
-        setShowCounter(s => !s)
-    }
-
-
-    return (
-        <div>
-            {showCounter ?( <Counter />) : false}
-            <button onClick={handleRemoveCounter}>Remove counter</button>
-        </div>
-    )
+export default function App() {
+    return <GithubUser username='Maurilio224'/>
 }
