@@ -8,10 +8,15 @@ export default function TodoList() {
       setItems([...items, name]);
       deleteInput.current.value = ''
   };
+
+  const handleReset = () => {
+    setItems([])
+  }
   return (
       <div>
           <input ref={deleteInput} onChange={(e) => setName(e.target.value)}/>
           <button onClick={handleAdd}>add</button>
+          <button onClick={handleReset}>reset list</button>
           {items.map((item, index) => {return <li index={index}>{item}</li>})}
       </div>
   );
