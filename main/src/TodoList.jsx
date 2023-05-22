@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 
-export default function TodoList() {
+export default function TodoList(props) {
   const deleteInput = useRef(null)
   const [name, setName] = useState('');
   const [items, setItems] = useState(["Go to Market", "Do sport", "Go to work", "Sleep"]);
@@ -23,8 +23,7 @@ export default function TodoList() {
           <input ref={deleteInput} onChange={(e) => setName(e.target.value)}/>
           <button onClick={handleAdd}>add</button>
           <button onClick={handleReset}>reset list</button>
-          {items.map((item, index) => {return (
-                                          <> <li index={index}>{item}</li> <button onClick={() => handleDelete(index)}>delete</button></>)})}
+          <ul>{props.render(items, handleDelete)}</ul>
       </div>
   );
 }
