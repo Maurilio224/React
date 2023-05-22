@@ -4,10 +4,14 @@ import ShowGithubUser from "./components/ShowGithubUser";
 
 function App() {
   return <div>
-          <Link to='/user/PuglisiAlfio'>Go to User</Link>
           <Routes>
             <Route path="user/:username" element={<ShowGithubUser/>}/>
           </Routes>
+          <Link to='/user/PuglisiAlfio'>Go to User PuglisiAlfio</Link>
+          <br />
+          <Link to='/user/yangus98'>Go to User Giuseppe Bianconi</Link>
+          <br />
+          <Link to='/user/gabrimarch3'>Go to User GabriMarche</Link>
         </div>
 }
 
