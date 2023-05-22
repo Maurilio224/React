@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import ClickCounter from "./ClickCounter";
+import {Counter} from "./Counter";
 
 export function App() {
-    const [count, setCount] = useState(0)
 
-    const OnCounterChange = () => {
-        console.log(`the value is now: ${count}`)
+    const [showCounter, setShowCounter] = useState(true)
+
+    function handleRemoveCounter() {
+        setShowCounter(s => !s)
     }
 
-    const incrementClick = () => {
-        const increment = count + 1
-        setCount(increment)
-    }
 
-    return <ClickCounter increment={incrementClick} count={count} change={OnCounterChange({count})} />
+    return (
+        <div>
+            {showCounter ?( <Counter />) : false}
+            <button onClick={handleRemoveCounter}>Remove counter</button>
+        </div>
+    )
 }
