@@ -8,18 +8,14 @@ function GithubUser(props) {
         fetch(`https://api.github.com/users/${props.username}`)
         .then(response => response.json())
         .then(json => {
-            console.log(json)
             setData(json)
         });
     }, [props.username])
 
     return <>
-            {data && (
-                <div>
-                <h4>{data.name}</h4>
-                <p>{data.login}</p>
-                </div>
-            )}
+            <div>
+                {data && <a href={data.html_url}><h1>{data.login}</h1></a>}
+            </div>
         </>
 }
 
