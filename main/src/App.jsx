@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import {Counter} from "./Counter";
+import React from "react";
+import { FilteredList } from "./FilteredList";
 
 export function App() {
-
-
-    return <Counter />
+    return <FilteredList/>
 }
