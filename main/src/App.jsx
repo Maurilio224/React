@@ -1,12 +1,13 @@
-import Counter from './components/Counter';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Link, Route, Routes } from "react-router-dom";
+import ShowGithubUser from "./components/ShowGithubUser";
+
 
 function App() {
   return <div>
-          <Link to="/counter">Counter</Link>
-        <Routes>
-          <Route path='/counter' element={<Counter/>} />   
-        </Routes>
+          <Link to='/user/PuglisiAlfio'>Go to User</Link>
+          <Routes>
+            <Route path="user/:username" element={<ShowGithubUser/>}/>
+          </Routes>
         </div>
 }
 
