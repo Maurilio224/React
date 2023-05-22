@@ -12,12 +12,19 @@ export default function TodoList() {
   const handleReset = () => {
     setItems([])
   }
+
+  const handleDelete = (index) => {
+    const array = [...items]
+    array.splice(index, 1)
+    setItems(array)
+  }
   return (
       <div>
           <input ref={deleteInput} onChange={(e) => setName(e.target.value)}/>
           <button onClick={handleAdd}>add</button>
           <button onClick={handleReset}>reset list</button>
-          {items.map((item, index) => {return <li index={index}>{item}</li>})}
+          {items.map((item, index) => {return (
+                                          <> <li index={index}>{item}</li> <button onClick={() => handleDelete(index)}>delete</button></>)})}
       </div>
   );
 }
